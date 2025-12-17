@@ -1,605 +1,223 @@
-import {tokens} from "../theme"
 
-export const mockCampaigns = [
+
+// mockData.js - Marketing Data-Driven Analysis Data
+
+export const marketingData = [
   {
     id: 1,
-    name: "Black Friday Promo",
-    startDate: "2025-01-10",
-    endDate: "2025-01-20",
-    impressions: 54000,
-    clicks: 4500,
-    conversions: 320,
-    spend: 1200,
-    revenue: 4300,
+    date: "2025-01-05",
+    customer_id: "C001",
+    customer_name: "Amina Njoya",
+    campaign: "Promo Jan",
+    channel: "Facebook",
+    category: "Email Marketing",
+    amount: 300000,
+    region: "Douala"
   },
   {
     id: 2,
-    name: "Christmas Deals",
-    startDate: "2025-12-01",
-    endDate: "2025-12-25",
-    impressions: 120000,
-    clicks: 9850,
-    conversions: 900,
-    spend: 3100,
-    revenue: 9600,
+    date: "2025-01-06",
+    customer_id: "C002",
+    customer_name: "Jean Mbarga",
+    campaign: "Promo Jan",
+    channel: "Google Ads",
+    category: "Formations",
+    amount: 150000,
+    region: "Yaounde"
   },
   {
     id: 3,
-    name: "New Year Launch",
-    startDate: "2025-01-01",
-    endDate: "2025-01-08",
-    impressions: 76000,
-    clicks: 6200,
-    conversions: 510,
-    spend: 2100,
-    revenue: 7800,
+    date: "2025-01-08",
+    customer_id: "C001",
+    customer_name: "Amina Njoya",
+    campaign: "Promo Jan",
+    channel: "Facebook",
+    category: "Email Marketing",
+    amount: 200000,
+    region: "Douala"
   },
   {
     id: 4,
-    name: "Valentine Special",
-    startDate: "2025-02-01",
-    endDate: "2025-02-14",
-    impressions: 43000,
-    clicks: 3500,
-    conversions: 220,
-    spend: 1500,
-    revenue: 3900,
-  },
-  {
-    id: 5,
-    name: "Summer Clearance",
-    startDate: "2025-06-10",
-    endDate: "2025-06-30",
-    impressions: 89000,
-    clicks: 7900,
-    conversions: 640,
-    spend: 2600,
-    revenue: 10200,
-  },
-  {
-    id: 6,
-    name: "Back to School Boost",
-    startDate: "2025-08-15",
-    endDate: "2025-09-05",
-    impressions: 67000,
-    clicks: 5300,
-    conversions: 380,
-    spend: 1800,
-    revenue: 6200,
-  },
-];
-
-export const mockCustomers = [
-
-  {
-    id: 1,
-    name: "John Doe",
-    email: "john.doe@gmail.com",
-    lastPurchase: "2025-01-12",
-    totalSpent: 450,
-    purchaseCount: 5,
-    r: 4,
-    f: 4,
-    m: 3,
-  },
-  {
-    id: 2,
-    name: "Sarah Smith",
-    email: "sarah.smith@yahoo.com",
-    lastPurchase: "2025-01-02",
-    totalSpent: 1200,
-    purchaseCount: 12,
-    r: 5,
-    f: 5,
-    m: 5,
-  },
-  {
-    id: 3,
-    name: "Michael Johnson",
-    email: "michael.johnson@gmail.com",
-    lastPurchase: "2024-12-20",
-    totalSpent: 380,
-    purchaseCount: 3,
-    r: 3,
-    f: 2,
-    m: 2,
-  },
-  {
-    id: 4,
-    name: "Emily Brown",
-    email: "emily.brown@hotmail.com",
-    lastPurchase: "2024-11-18",
-    totalSpent: 150,
-    purchaseCount: 2,
-    r: 2,
-    f: 1,
-    m: 1,
-  },
-  {
-    id: 5,
-    name: "James Wilson",
-    email: "james.wilson@gmail.com",
-    lastPurchase: "2025-01-10",
-    totalSpent: 980,
-    purchaseCount: 8,
-    r: 5,
-    f: 4,
-    m: 4,
-  },
-  {
-    id: 6,
-    name: "Olivia Martinez",
-    email: "olivia.martinez@yahoo.com",
-    lastPurchase: "2024-12-28",
-    totalSpent: 250,
-    purchaseCount: 3,
-    r: 4,
-    f: 2,
-    m: 2,
-  },
-  {
-    id: 7,
-    name: "David Anderson",
-    email: "david.anderson@gmail.com",
-    lastPurchase: "2024-12-01",
-    totalSpent: 600,
-    purchaseCount: 6,
-    r: 3,
-    f: 3,
-    m: 3,
-  },
-  {
-    id: 8,
-    name: "Sophia Lee",
-    email: "sophia.lee@gmail.com",
-    lastPurchase: "2025-01-06",
-    totalSpent: 1300,
-    purchaseCount: 14,
-    r: 5,
-    f: 5,
-    m: 5,
-  },
-  {
-    id: 9,
-    name: "Daniel Harris",
-    email: "daniel.harris@gmail.com",
-    lastPurchase: "2024-10-15",
-    totalSpent: 90,
-    purchaseCount: 1,
-    r: 1,
-    f: 1,
-    m: 1,
-  },
-  {
-    id: 10,
-    name: "Mia Clark",
-    email: "mia.clark@hotmail.com",
-    lastPurchase: "2025-01-08",
-    totalSpent: 520,
-    purchaseCount: 7,
-    r: 5,
-    f: 4,
-    m: 3,
-  },
-  {
-    id: 11,
-    name: "Ethan Wright",
-    email: "ethan.wright@gmail.com",
-    lastPurchase: "2024-12-22",
-    totalSpent: 230,
-    purchaseCount: 3,
-    r: 4,
-    f: 2,
-    m: 2,
-  },
-  {
-    id: 12,
-    name: "Isabella Lewis",
-    email: "isabella.lewis@yahoo.com",
-    lastPurchase: "2024-11-25",
-    totalSpent: 700,
-    purchaseCount: 9,
-    r: 3,
-    f: 4,
-    m: 4,
-  },
-  {
-    id: 13,
-    name: "William Young",
-    email: "william.young@gmail.com",
-    lastPurchase: "2024-09-30",
-    totalSpent: 110,
-    purchaseCount: 1,
-    r: 1,
-    f: 1,
-    m: 1,
-  },
-    {
-    id: 14,
-    name: "John Doe",
-    email: "johndoe1@yahoo.com",
-    lastPurchase: "2024-11-10",
-    totalSpent: 1200,
-    purchaseCount: 8,
-    r: 4,
-    f: 2,
-    m: 2,
-  },
-  {
-    id: 15,
-    name: "Jane Smith",
-    email: "jane.smith@yahoo.com",
-    lastPurchase: "2025-01-03",
-    totalSpent: 320,
-    purchaseCount: 2,
-    r: 5,
-    f: 5,
-    m: 5,
-  },
-  
-];
-
-
-export const mockTransactions = [
-  // Customer 1 – small but frequent buyer
-  {
-    id: 1,
-    customerId: 1,
     date: "2025-01-12",
-    amount: 3500,
-    paymentMethod: "MTN MoMo",
-    product: "Abonnement Newsletter Pro",
-  },
-  {
-    id: 2,
-    customerId: 1,
-    date: "2025-02-05",
-    amount: 4200,
-    paymentMethod: "Orange Money",
-    product: "Pack Data Insights Basic",
-  },
-
-  // Customer 2 – dormant but high value
-  {
-    id: 3,
-    customerId: 2,
-    date: "2024-12-02",
-    amount: 15000,
-    paymentMethod: "MTN MoMo",
-    product: "Formation Marketing Data",
-  },
-
-  // Customer 3 – very active
-  {
-    id: 4,
-    customerId: 3,
-    date: "2025-01-20",
-    amount: 7000,
-    paymentMethod: "MTN MoMo",
-    product: "Pack Analyse de Performance",
+    customer_id: "C003",
+    customer_name: "Sandrine Etoa",
+    campaign: "Promo Jan",
+    channel: "Instagram",
+    category: "Social Media Audit",
+    amount: 180000,
+    region: "Bafoussam"
   },
   {
     id: 5,
-    customerId: 3,
-    date: "2025-02-14",
-    amount: 7200,
-    paymentMethod: "Visa",
-    product: "Abonnement Premium",
-  },
-
-  // Customer 4
-  {
-    id: 6,
-    customerId: 4,
-    date: "2025-02-02",
-    amount: 5400,
-    paymentMethod: "Orange Money",
-    product: "Audit Réseaux Sociaux",
-  },
-
-  // Customer 5
-  {
-    id: 7,
-    customerId: 5,
-    date: "2025-01-09",
-    amount: 2700,
-    paymentMethod: "MTN MoMo",
-    product: "Analyse de Campagne SMS",
-  },
-
-  // Customer 6
-  {
-    id: 8,
-    customerId: 6,
-    date: "2025-01-27",
-    amount: 9000,
-    paymentMethod: "Visa",
-    product: "Dashboard Performance",
-  },
-
-  // Customer 7
-  {
-    id: 9,
-    customerId: 7,
-    date: "2025-01-04",
-    amount: 11000,
-    paymentMethod: "MTN MoMo",
-    product: "Pack Data Mining",
-  },
-
-  // Customer 8
-  {
-    id: 10,
-    customerId: 8,
-    date: "2025-02-01",
-    amount: 4000,
-    paymentMethod: "Orange Money",
-    product: "Analyse Email Marketing",
-  },
-
-  // Customer 9
-  {
-    id: 11,
-    customerId: 9,
-    date: "2025-01-11",
-    amount: 3200,
-    paymentMethod: "MTN MoMo",
-    product: "Suivi Performance Produit",
-  },
-
-  // Customer 10
-  {
-    id: 12,
-    customerId: 10,
-    date: "2024-12-28",
-    amount: 6000,
-    paymentMethod: "Orange Money",
-    product: "Pack Social Ads Report",
-  },
-
-  // Customer 11
-  {
-    id: 13,
-    customerId: 11,
-    date: "2025-02-03",
-    amount: 8500,
-    paymentMethod: "Visa",
-    product: "Analyse Audience Web",
-  },
-
-  // Customer 12
-  {
-    id: 14,
-    customerId: 12,
-    date: "2024-12-20",
-    amount: 5000,
-    paymentMethod: "MTN MoMo",
-    product: "Formation Courte Data Marketing",
-  },
-
-  // Customer 13
-  {
-    id: 15,
-    customerId: 13,
     date: "2025-01-18",
-    amount: 7500,
-    paymentMethod: "Orange Money",
-    product: "Pack SQL pour Marketers",
-  },
-];
-
-
-
-
-export const mockRfmSegments = [
-  { segment: "Champions", r: 5, f: 5, m: 5 },
-  { segment: "Loyal Customers", r: 4, f: 4, m: 3 },
-  { segment: "At Risk", r: 2, f: 2, m: 2 },
-  { segment: "Recent", r: 4, f: 2, m: 2 },
-  { segment: "Inactive", r: 1, f: 1, m: 1 },
-  { segment: "Occasional", r: 3, f: 2, m: 2 },
-];
-
-
-export const mockbar = [
-  { category: "Formations", revenue: 850000 },
-  { category: "Email Marketing", revenue: 540000 },
-  { category: "Data Analytics Packs", revenue: 720000 },
-  { category: "Social Media Audit", revenue: 380000 },
-  { category: "Branding & Identity", revenue: 290000 },
-  { category: "Community Management", revenue: 610000 },
-];
-
-export const mockline = [
-  { month: "Jan", revenue: 320000 },
-  { month: "Feb", revenue: 450000 },
-  { month: "Mar", revenue: 510000 },
-  { month: "Apr", revenue: 390000 },
-  { month: "May", revenue: 610000 },
-  { month: "Jun", revenue: 720000 },
-  { month: "Jul", revenue: 810000 },
-  { month: "Aug", revenue: 760000 },
-  { month: "Sep", revenue: 680000 },
-  { month: "Oct", revenue: 840000 },
-  { month: "Nov", revenue: 920000 },
-  { month: "Dec", revenue: 1030000 },
-];
-
-
-export const mockDatasetTable = [
-  {
-    id: 1,
-    name: "Formation Marketing Digital – Batch 01",
+    customer_id: "C002",
+    customer_name: "Jean Mbarga",
+    campaign: "Promo Jan",
+    channel: "Google Ads",
     category: "Formations",
-    value: 300000,
-    date: "2025-01-12",
-  },
-  {
-    id: 2,
-    name: "Pack Email Starter – Janvier",
-    category: "Email Marketing",
-    value: 120000,
-    date: "2025-01-25",
-  },
-  {
-    id: 3,
-    name: "Audit Réseaux Sociaux – Entreprise LounaTech",
-    category: "Social Media Audit",
-    value: 180000,
-    date: "2025-02-18",
-  },
-  {
-    id: 4,
-    name: "Community Management – Boutique Ndolo",
-    category: "Community Management",
-    value: 250000,
-    date: "2025-02-20",
-  },
-  {
-    id: 5,
-    name: "Branding & Identity – Logo Refonte",
-    category: "Branding & Identity",
-    value: 190000,
-    date: "2025-02-22",
+    amount: 220000,
+    region: "Yaounde"
   },
   {
     id: 6,
-    name: "Data Analytics Pack – Web Insights",
-    category: "Data Analytics Packs",
-    value: 350000,
-    date: "2025-03-01",
+    date: "2025-02-02",
+    customer_id: "C001",
+    customer_name: "Amina Njoya",
+    campaign: "Valentine Boost",
+    channel: "Facebook",
+    category: "Email Marketing",
+    amount: 140000,
+    region: "Douala"
   },
   {
     id: 7,
-    name: "Formation Marketing Digital – Batch 02",
-    category: "Formations",
-    value: 320000,
-    date: "2025-03-05",
+    date: "2025-02-04",
+    customer_id: "C004",
+    customer_name: "Patrick Ndzi",
+    campaign: "Valentine Boost",
+    channel: "LinkedIn",
+    category: "Data Analytics Packs",
+    amount: 350000,
+    region: "Douala"
   },
   {
     id: 8,
-    name: "Email Automation – Mars",
-    category: "Email Marketing",
-    value: 140000,
-    date: "2025-03-10",
+    date: "2025-02-06",
+    customer_id: "C003",
+    customer_name: "Sandrine Etoa",
+    campaign: "Valentine Boost",
+    channel: "Instagram",
+    category: "Social Media Audit",
+    amount: 200000,
+    region: "Bafoussam"
   },
   {
     id: 9,
-    name: "Campagne Instagram – Supermarché Mboa",
-    category: "Social Media Audit",
-    value: 210000,
-    date: "2025-03-13",
+    date: "2025-02-10",
+    customer_id: "C005",
+    customer_name: "Luc Fotso",
+    campaign: "Valentine Boost",
+    channel: "Google Ads",
+    category: "Formations",
+    amount: 180000,
+    region: "Dschang"
   },
   {
     id: 10,
-    name: "Gestion Communauté – Tech Women Hub",
-    category: "Community Management",
-    value: 330000,
-    date: "2025-03-15",
+    date: "2025-03-01",
+    customer_id: "C001",
+    customer_name: "Amina Njoya",
+    campaign: "March Campaign",
+    channel: "Facebook",
+    category: "Email Marketing",
+    amount: 160000,
+    region: "Douala"
   },
   {
     id: 11,
-    name: "Identité Visuelle – Start-up Kemit Labs",
-    category: "Branding & Identity",
-    value: 270000,
-    date: "2025-03-18",
+    date: "2025-03-03",
+    customer_id: "C002",
+    customer_name: "Jean Mbarga",
+    campaign: "March Campaign",
+    channel: "Google Ads",
+    category: "Formations",
+    amount: 240000,
+    region: "Yaounde"
   },
   {
     id: 12,
-    name: "Pack Analytics – Dashboard Business",
+    date: "2025-03-05",
+    customer_id: "C004",
+    customer_name: "Patrick Ndzi",
+    campaign: "March Campaign",
+    channel: "LinkedIn",
     category: "Data Analytics Packs",
-    value: 400000,
-    date: "2025-03-22",
+    amount: 420000,
+    region: "Douala"
   },
   {
     id: 13,
-    name: "Formation Community Management – Avril",
-    category: "Formations",
-    value: 280000,
-    date: "2025-04-02",
+    date: "2025-03-08",
+    customer_id: "C006",
+    customer_name: "Nathalie Kouam",
+    campaign: "March Campaign",
+    channel: "Instagram",
+    category: "Community Management",
+    amount: 210000,
+    region: "Bafoussam"
   },
   {
     id: 14,
-    name: "Email Marketing – Newsletter Entreprise Avenir",
-    category: "Email Marketing",
-    value: 150000,
-    date: "2025-04-04",
+    date: "2025-03-10",
+    customer_id: "C003",
+    customer_name: "Sandrine Etoa",
+    campaign: "March Campaign",
+    channel: "Instagram",
+    category: "Social Media Audit",
+    amount: 190000,
+    region: "Bafoussam"
   },
   {
     id: 15,
-    name: "Audit TikTok – Restaurant Le Cube",
-    category: "Social Media Audit",
-    value: 230000,
-    date: "2025-04-06",
-  },
-  {
-    id: 16,
-    name: "Community Management – Agence Nkolo",
-    category: "Community Management",
-    value: 310000,
-    date: "2025-04-10",
-  },
-  {
-    id: 17,
-    name: "Rebranding – Société Bantu Global",
-    category: "Branding & Identity",
-    value: 350000,
-    date: "2025-04-11",
-  },
-  {
-    id: 18,
-    name: "Data Analytics Pack-campagne performance",
-    category: "Data Analytics Packs",
-    value: 380000,
-    date: "2025-04-12",
-  },
-  {
-    id: 19,
-    name: "Formation Data Marketing – Session 1",
-    category: "Formations",
-    value: 310000,
-    date: "2025-04-14",
-  },
-  {
-    id: 20,
-    name: "Email Drip Campaign – Entreprise ImmoCMR",
+    date: "2025-03-12",
+    customer_id: "C001",
+    customer_name: "Amina Njoya",
+    campaign: "March Campaign",
+    channel: "Facebook",
     category: "Email Marketing",
-    value: 170000,
-    date: "2025-04-16",
-  },
-  {
-    id: 21,
-    name: "Analyse Réseaux Sociaux – Coach Douala",
-    category: "Social Media Audit",
-    value: 200000,
-    date: "2025-04-18",
-  },
-  {
-    id: 22,
-    name: "Community Management – ONG Afrique Forte",
-    category: "Community Management",
-    value: 290000,
-    date: "2025-04-20",
-  },
-  {
-    id: 23,
-    name: "Branding & Identity – Identité Complète",
-    category: "Branding & Identity",
-    value: 420000,
-    date: "2025-04-22",
-  },
-  {
-    id: 24,
-    name: "Analytics Pack – ROI Insights",
-    category: "Data Analytics Packs",
-    value: 460000,
-    date: "2025-04-25",
-  },
-  {
-    id: 25,
-    name: "Formation SEO & Content Strategy",
-    category: "Formations",
-    value: 295000,
-    date: "2025-04-27",
-  },
+    amount: 180000,
+    region: "Douala"
+  }
 ];
+
+// Données agrégées utiles pour les analyses
+
+export const campaigns = ["Promo Jan", "Valentine Boost", "March Campaign"];
+
+export const channels = ["Facebook", "Google Ads", "Instagram", "LinkedIn"];
+
+export const categories = [
+  "Email Marketing",
+  "Formations",
+  "Social Media Audit",
+  "Data Analytics Packs",
+  "Community Management"
+];
+
+export const regions = ["Douala", "Yaounde", "Bafoussam", "Dschang"];
+
+export const customers = [
+  { id: "C001", name: "Amina Njoya" },
+  { id: "C002", name: "Jean Mbarga" },
+  { id: "C003", name: "Sandrine Etoa" },
+  { id: "C004", name: "Patrick Ndzi" },
+  { id: "C005", name: "Luc Fotso" },
+  { id: "C006", name: "Nathalie Kouam" }
+];
+
+// Fonction utilitaire pour obtenir les données par période
+export const getDataByMonth = (month) => {
+  return marketingData.filter(item => item.date.startsWith(`2025-${month.toString().padStart(2, '0')}`));
+};
+
+// Fonction utilitaire pour calculer le revenu total
+export const getTotalRevenue = (data = marketingData) => {
+  return data.reduce((sum, item) => sum + item.amount, 0);
+};
+
+// Fonction utilitaire pour obtenir les données par campagne
+export const getDataByCampaign = (campaignName) => {
+  return marketingData.filter(item => item.campaign === campaignName);
+};
+
+// Fonction utilitaire pour obtenir les données par client
+export const getDataByCustomer = (customerId) => {
+  return marketingData.filter(item => item.customer_id === customerId);
+};
+
+// Fonction utilitaire pour obtenir les données par canal
+export const getDataByChannel = (channelName) => {
+  return marketingData.filter(item => item.channel === channelName);
+};
+
+export default marketingData;
