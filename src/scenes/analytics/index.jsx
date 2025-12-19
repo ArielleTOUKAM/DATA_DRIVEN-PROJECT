@@ -52,13 +52,13 @@ const Analytics = ()=>{
             {/* Filters bar */}
             <Box display="flex" gap="20px" mb="20px" alignItems="center">
                 <TextField select label = "Campaign" value = {selectedCampaign} onChange={(e)=> setSelectedCampaign(e.target.value)} 
-                    sx={{width: "150px" }}>
+                    sx={{width: "250px" }}>
                     <MenuItem value = "All"> All campaigns</MenuItem>
                     {campaigns.map((c) => <MenuItem key={c} value={c}>{c} </MenuItem>)}
                 </TextField>
 
                 <TextField select label = "Channel" value = {selectedChannel} onChange={(e)=> setSelectedChannel(e.target.value)} 
-                    sx={{width: "150px" }}>
+                    sx={{width: "250px" }}>
                     <MenuItem value = "All"> All channels</MenuItem>
                     {channels.map((ch) => <MenuItem key={ch} value={ch}>{ch} </MenuItem>)}
                 </TextField>

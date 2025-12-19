@@ -96,15 +96,15 @@ const Sidebar = () => {
 
                 {/* USER */}
                 {!isCollapsed && (
-                    <Box mb="10px" mt="20px">
+                    <Box mb="20px" mt="20px">
                         <Box display="flex" justifyContent="center" alignItems="center">
-                            <img alt='profile_user' width= "70px" height="70px" src={profileImg} style={{cursor: "pointer", borderRadius:"50%"}}/>
+                            <img alt='profile_user' width= "90px" height="90px" src={profileImg} style={{cursor: "pointer", borderRadius:"50%"}}/>
                         </Box>
                         
 
                         <Box textAlign="center">
-                            <Typography variant='h3'  color= {colors.grey[100]} fontWeight='bold' sx={{ m:"2px 0 0 0"}}>Tchanga esther</Typography>
-                            <Typography variant='h5' color={colors.greenAccent[500]} sx={{ mt:"2px", mb: "13px"}}> Marketer </Typography>
+                            <Typography variant='h3'  color= {colors.grey[100]} fontWeight='bold' sx={{ m:"15px 0 0 0"}}>Tchanga esther</Typography>
+                            <Typography variant='h4' color={colors.greenAccent[500]} sx={{ mt:"8px", mb: "13px"}}> Marketer </Typography>
                         </Box>
                     </Box>
                 ) }
@@ -143,14 +143,7 @@ const Sidebar = () => {
                         setSelected={setSelected}
                         
                     />
-                    <Item 
-                        title="Reports" 
-                        to="/reports" 
-                        icon={<ContactsOutlinedIcon  />}
-                        selected={selected}
-                        setSelected={setSelected}
-                        
-                    />
+                  
                     <Item 
                         title="Settings" 
                         to="/settings" 

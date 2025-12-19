@@ -1,6 +1,4 @@
-
-
-// mockData.js - Marketing Data-Driven Analysis Data
+import {tokens} from "../theme"
 
 export const marketingData = [
   {

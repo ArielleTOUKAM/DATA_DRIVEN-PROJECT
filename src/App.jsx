@@ -6,8 +6,9 @@ import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Bar from "./scenes/bar";
 import Pie from "./scenes/pie";
-// import Datasets from "./scenes/datasets";
-// import Reports from "./scenes/reports";
+import Datasets from "./scenes/Datasets";
+import Line from "./scenes/Line";
+
 import Settings from "./scenes/settings";
 import Analytics from "./scenes/analytics";
 import Calendar from "./scenes/calendar";
@@ -31,13 +32,17 @@ return (
           <Routes>
             <Route path="/" element = {<Dashboard/>} />
             <Route path="/analytics" element = {<Analytics/>} />
-            {/* <Route path="/datasets" element = {<Datasets/>} /> */}
-            {/* <Route path="/reports" element = {<Reports/>} /> */}
+            <Route path="/datasets" element = {<Datasets/>} /> 
+           {/* <Route path="/reports" element = {<Reports/>} /> */}
             <Route path="/settings" element = {<Settings/>} />
             <Route path="/bar" element = {<Bar/>} />
             <Route path="/pie" element = {<Pie/>} />
             <Route path="/calendar" element = {<Calendar/>} />
             <Route path="/faq" element = {<Faq/>} />
+            {/* <Route path="/settings" element = {<Settings/>} /> */}
+            {/* <Route path="/calendar" element = {<Calendar/>} /> */}
+            <Route path="/line" element = {<Line/>} />
+
           </Routes>
         </main>
       </div>
