@@ -1,11 +1,14 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
+import Header from '../../components/Header'
 
 const Dashboard = () => {
-  return (
-    <div>
-      <Typography>Dashboard works</Typography>
-    </div>
+  return ( 
+    <Box m="20px">
+      <Box display="flex" justifyContent="space-between" alignItems={"center"}>
+      <Header title= "DASHBOARD" subtitle= "Welcome to your Dashboard"/>
+      </Box>
+    </Box>
   )
 }
 

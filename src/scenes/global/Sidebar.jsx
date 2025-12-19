@@ -23,9 +23,9 @@ const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
     const colors= tokens(theme.palette.mode);
     return (
-        <MenuItem active={selected === title} style={{color: colors.grey[100]}} onClick={() => setSelected(title)} icon={icon}>
-        <Typography variant='body2' sx={{lineHeight: 1.2}}>{title}</Typography>
-        <Link to = {to} />
+        <MenuItem active={selected === title} style={{color: colors.grey[100]}} onClick={() => setSelected(title)} icon={icon} component={<Link to = {to} />}>
+        <Typography variant='h5' sx={{lineHeight: 15}}>{title}</Typography>
+        
         </MenuItem>
     )
 }
@@ -81,8 +81,9 @@ const Sidebar = () => {
                             justifyContent='space-between'
                             alignItems="center"
                             ml="10px"
+                            // mb="20px"
                          >   
-                        <Typography variant='h6' color={colors.grey[100]}>
+                        <Typography variant='h4' color={colors.grey[100]}>
                             MARKETER
                         </Typography>
                     
@@ -95,14 +96,14 @@ const Sidebar = () => {
 
                 {/* USER */}
                 {!isCollapsed && (
-                    <Box mb="3px" mt="-2px">
+                    <Box mb="10px" mt="20px">
                         <Box display="flex" justifyContent="center" alignItems="center">
-                            <img alt='profile_user' width= "60px" height="60px" src={profileImg} style={{cursor: "pointer", borderRadius:"50%"}}/>
+                            <img alt='profile_user' width= "70px" height="70px" src={profileImg} style={{cursor: "pointer", borderRadius:"50%"}}/>
                         </Box>
                         
 
                         <Box textAlign="center">
-                            <Typography variant='h3'  color= {colors.grey[100]} fontWeight='bold' sx={{ m:"2px 0 0 0"}}>Arielle T</Typography>
+                            <Typography variant='h3'  color= {colors.grey[100]} fontWeight='bold' sx={{ m:"2px 0 0 0"}}>Tchanga esther</Typography>
                             <Typography variant='h5' color={colors.greenAccent[500]} sx={{ mt:"2px", mb: "13px"}}> Marketer </Typography>
                         </Box>
                     </Box>
@@ -113,31 +114,31 @@ const Sidebar = () => {
                 <Box paddingLeft={isCollapsed ? undefined: "10%"}>
                     <Item 
                         title="Dashboard" 
-                        to="/" 
-                        icon={<HomeOutlinedIcon fontSize='small'/>}
+                        to="/dashboard" 
+                        icon={<HomeOutlinedIcon />}
                         selected={selected}
                         setSelected={setSelected}
                         isCollapsed={isCollapsed}
                         
                     />
 
-                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"8px 0 5px 20px",
+                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"12px 0 5px 20px",
                         
                     }}> Data </Typography>)}
                     <Item 
                         title="Datasets" 
                         to="/datasets" 
-                        icon={<ContactsOutlinedIcon fontSize='small'/>}
+                        icon={<ContactsOutlinedIcon />}
                         selected={selected}
                         setSelected={setSelected}
                        
                     />
 
-                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"8px 0 5px 20px"}}> Pages </Typography>)}
+                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"12px 0 5px 20px"}}> Pages </Typography>)}
                     <Item 
                         title="Analytics" 
                         to="/analytics" 
-                        icon={<PeopleOutlinedIcon fontSize='small'/>}
+                        icon={<PeopleOutlinedIcon />}
                         selected={selected}
                         setSelected={setSelected}
                         
@@ -145,7 +146,7 @@ const Sidebar = () => {
                     <Item 
                         title="Reports" 
                         to="/reports" 
-                        icon={<HomeOutlinedIcon fontSize='small'/>}
+                        icon={<ContactsOutlinedIcon  />}
                         selected={selected}
                         setSelected={setSelected}
                         
@@ -153,14 +154,14 @@ const Sidebar = () => {
                     <Item 
                         title="Settings" 
                         to="/settings" 
-                        icon={<PersonOutlinedIcon fontSize='small'/>}
+                        icon={<PersonOutlinedIcon />}
                         selected={selected}
                         setSelected={setSelected}
                     />
                     <Item 
                         title="Calendar" 
                         to="/calendar" 
-                        icon={<CalendarTodayOutlinedIcon fontSize='small'/>}
+                        icon={<CalendarTodayOutlinedIcon/>}
                         selected={selected}
                         setSelected={setSelected}
                     />
@@ -168,31 +169,31 @@ const Sidebar = () => {
                     <Item 
                         title="FAQ page" 
                         to="/faq" 
-                        icon={<HelpOutlinedIcon fontSize='small'/>}
+                        icon={<HelpOutlinedIcon/>}
                         selected={selected}
                         setSelected={setSelected}  
                     />
 
 
-                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"8px 0 1px 20px"}}> Charts </Typography>)}
+                    {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"12px 0 1px 20px"}}> Charts </Typography>)}
                     <Item 
                         title="Bar Chart" 
                         to="/bar" 
-                        icon={<BarChartOutlinedIcon fontSize='small'/>}
+                        icon={<BarChartOutlinedIcon />}
                         selected={selected}
                         setSelected={setSelected}
                     />
                     <Item 
                         title="Pie Chart" 
                         to="/pie" 
-                        icon={<PieChartOutlineOutlinedIcon fontSize='small'/>}
+                        icon={<PieChartOutlineOutlinedIcon/>}
                         selected={selected}
                         setSelected={setSelected}
                     />
                     <Item 
                         title="Line Chart" 
                         to="/line" 
-                        icon={<TimeLineOutlinedIcon fontSize='small'/>}
+                        icon={<TimeLineOutlinedIcon/>}
                         selected={selected}
                         setSelected={setSelected}
                     />
