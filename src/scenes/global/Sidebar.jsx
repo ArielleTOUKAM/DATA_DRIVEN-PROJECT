@@ -23,9 +23,9 @@ const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
     const colors= tokens(theme.palette.mode);
     return (
-        <MenuItem active={selected === title} style={{color: colors.grey[100]}} onClick={() => setSelected(title)} icon={icon}>
+        <MenuItem active={selected === title} style={{color: colors.grey[100]}} onClick={() => setSelected(title)} icon={icon} component={<Link to = {to} />}>
         <Typography variant='body2' sx={{lineHeight: 1.2}}>{title}</Typography>
-        <Link to = {to} />
+        
         </MenuItem>
     )
 }
@@ -113,7 +113,7 @@ const Sidebar = () => {
                 <Box paddingLeft={isCollapsed ? undefined: "10%"}>
                     <Item 
                         title="Dashboard" 
-                        to="/" 
+                        to="/dashboard" 
                         icon={<HomeOutlinedIcon fontSize='small'/>}
                         selected={selected}
                         setSelected={setSelected}
@@ -177,14 +177,14 @@ const Sidebar = () => {
                     {!isCollapsed && (<Typography variant='h6' color={colors.grey[300]} sx={{m:"8px 0 1px 20px"}}> Charts </Typography>)}
                     <Item 
                         title="Bar Chart" 
-                        to="/bar" 
+                        to="/barchart" 
                         icon={<BarChartOutlinedIcon fontSize='small'/>}
                         selected={selected}
                         setSelected={setSelected}
                     />
                     <Item 
                         title="Pie Chart" 
-                        to="/pie" 
+                        to="/piechart" 
                         icon={<PieChartOutlineOutlinedIcon fontSize='small'/>}
                         selected={selected}
                         setSelected={setSelected}
