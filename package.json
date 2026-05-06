@@ -1,7 +1,8 @@
 {
-  "name": "data_driven",
+  "name": "data-driven-dashboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "React dashboard for marketing analytics and reporting.",
   "type": "module",
   "scripts": {
     "dev": "vite",
